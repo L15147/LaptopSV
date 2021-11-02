@@ -70,44 +70,44 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnLogin.setOnClickListener(v -> {
-//            String email = editTextUsername.getText().toString();
-//            String password = editTextPassword.getText().toString();
-//            if (editTextUsername.getText().toString().isEmpty() || editTextPassword.getText().toString().isEmpty()) {
-//                Toast.makeText(MainActivity.this, "Không được để trống!", Toast.LENGTH_LONG).show();
-//                return;
-//            }
-//            if (checkBox.isChecked()) {
-//                loginPrefsEditor.putBoolean("saveLogin", true);
-//                loginPrefsEditor.putString("username", email);
-//                loginPrefsEditor.putString("password", password);
-//                loginPrefsEditor.commit();
-//
-//            } else {
-//                loginPrefsEditor.clear();
-//                loginPrefsEditor.commit();
-//
-//            }
-//
-//            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-//
-//                @Override
-//                public void onComplete(Task<AuthResult> task) {
-//                    if (task.isSuccessful()) {
-//                        Toast.makeText(MainActivity.this, "Đăng nhập thành công ", Toast.LENGTH_LONG).show();
-//                        user = email;
-//                        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-//                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-//                        imm.hideSoftInputFromWindow(editTextUsername.getWindowToken(), 0);
-//                        startActivity(intent);
-//
-//                    } else {
-//                        Toast.makeText(MainActivity.this,
-//                                "Sai toàn khoản hoặc mật khẩu!!!", Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//            });
-            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-            startActivity(intent);
+            String email = editTextUsername.getText().toString();
+            String password = editTextPassword.getText().toString();
+            if (editTextUsername.getText().toString().isEmpty() || editTextPassword.getText().toString().isEmpty()) {
+                Toast.makeText(MainActivity.this, "Không được để trống!", Toast.LENGTH_LONG).show();
+                return;
+            }
+            if (checkBox.isChecked()) {
+                loginPrefsEditor.putBoolean("saveLogin", true);
+                loginPrefsEditor.putString("username", email);
+                loginPrefsEditor.putString("password", password);
+                loginPrefsEditor.commit();
+
+            } else {
+                loginPrefsEditor.clear();
+                loginPrefsEditor.commit();
+
+            }
+
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+                @Override
+                public void onComplete(Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(MainActivity.this, "Đăng nhập thành công ", Toast.LENGTH_LONG).show();
+                        user = email;
+                        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(editTextUsername.getWindowToken(), 0);
+                        startActivity(intent);
+
+                    } else {
+                        Toast.makeText(MainActivity.this,
+                                "Sai toàn khoản hoặc mật khẩu!!!", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+//            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+//            startActivity(intent);
         });
     }
 
