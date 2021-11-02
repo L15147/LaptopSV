@@ -1,0 +1,2 @@
+rootProject.name = "LaptopSV"
+include ':app'

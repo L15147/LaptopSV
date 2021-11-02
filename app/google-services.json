@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "707991323422",
+    "project_id": "quanlylaptop-5e23a",
+    "storage_bucket": "quanlylaptop-5e23a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707991323422:android:5275f3f12e7bc8d420ff0f",
+        "android_client_info": {
+          "package_name": "com.example.laptopsv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707991323422-qmulq228asbu5a1uqfrle2oq9mkf37io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6y-BPeHxIQ5V7mqdVxSg1cQl0lgbXpns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707991323422-qmulq228asbu5a1uqfrle2oq9mkf37io.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
