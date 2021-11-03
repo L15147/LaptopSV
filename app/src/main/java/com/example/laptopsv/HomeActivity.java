@@ -102,16 +102,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
         switch (id) {
             case R.id.addFood:
-                Intent x1 = new Intent(HomeActivity.this, com.example.laptopsv.ListFoodActivity.class);
-                startActivity(x1);
-//                if(com.example.laptopsv.MainActivity.user.equalsIgnoreCase("Admin@gmail.com") ||
-//                    com.example.laptopsv.MainActivity.user.equalsIgnoreCase(("vuhanammm@gmail.com"))||
-//                        com.example.laptopsv.MainActivity.user.equalsIgnoreCase(("vudaokhac@gmail.com"))) {
-//                    Intent x1 = new Intent(HomeActivity.this, com.example.laptopsv.ListFoodActivity.class);
-//                    startActivity(x1);
-//                }else {
-//                    Toast.makeText(HomeActivity.this,"Bạn không có quyền làm việc này",Toast.LENGTH_SHORT).show();
-//                }
+//                Intent x1 = new Intent(HomeActivity.this, com.example.laptopsv.ListFoodActivity.class);
+//                startActivity(x1);
+                if(com.example.laptopsv.MainActivity.user.equalsIgnoreCase("long@gmail.com")) {
+                    Intent x1 = new Intent(HomeActivity.this, com.example.laptopsv.ListFoodActivity.class);
+                    startActivity(x1);
+                }else {
+                    Toast.makeText(HomeActivity.this,"Bạn không có quyền truy cập",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.cart:
                 Intent x = new Intent(HomeActivity.this, CartActivity.class);

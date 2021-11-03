@@ -62,7 +62,7 @@ public class Food_ChuCuaHang_Adapter extends RecyclerView.Adapter<Food_ChuCuaHan
 // Add the buttons
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                    FirebaseDatabase.getInstance().getReference().child("Food").child(foodList.get(position).getID())
+                    FirebaseDatabase.getInstance().getReference().child("Laptop").child(foodList.get(position).getID())
                             .removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {

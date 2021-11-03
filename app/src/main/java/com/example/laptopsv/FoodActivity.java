@@ -52,7 +52,7 @@ public class FoodActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
         // Read from the database
-        myRef.child("Food").orderByChild("type").equalTo(TYPE_FOOD).addValueEventListener(new ValueEventListener() {
+        myRef.child("Laptop").orderByChild("type").equalTo(TYPE_FOOD).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -97,7 +97,7 @@ public class FoodActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                myRef.child("Food").orderByChild("Name").startAt(charSequence.toString()+"").endAt(charSequence.toString()+"\uf8ff").addValueEventListener(new ValueEventListener() {
+                myRef.child("Laptop").orderByChild("Name").startAt(charSequence.toString()+"").endAt(charSequence.toString()+"\uf8ff").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Iterable<DataSnapshot> convert = snapshot.getChildren();
