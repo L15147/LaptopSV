@@ -40,7 +40,7 @@ public class ListFoodActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rvList.setLayoutManager(linearLayoutManager);
 
-        myRef.child("Food").addValueEventListener(new ValueEventListener() {
+        myRef.child("Laptop").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Iterable<DataSnapshot> convert = snapshot.getChildren();

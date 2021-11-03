@@ -18,6 +18,7 @@ public class Food implements Serializable {
         Status = status;
         Image = image;
     }
+
     public String getPriceFormated(){
         DecimalFormat formatter = new DecimalFormat("###,###,###");
         return formatter.format(Price);

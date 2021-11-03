@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,11 +17,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.laptopsv.Model.Food;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -28,6 +31,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.io.Console;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
@@ -115,6 +119,18 @@ public class AddFoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 themSanPham();
+//                String ten = edTen.getText().toString();
+//                String moTa = edMoTa.getText().toString();
+//                String gia = edGia.getText().toString();
+//
+//                Food food = new Food(loai,ten,moTa,Integer.parseInt(gia),trangThai,"R.drawable.food");
+//                DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Laptop");
+//                myRef.setValue(food, new DatabaseReference.CompletionListener() {
+//                    @Override
+//                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+//                        Toast.makeText(getApplicationContext(),"Thêm thành công",Toast.LENGTH_SHORT).show();
+//                    }
+//                });
             }
         });
     }
@@ -144,7 +160,7 @@ public class AddFoodActivity extends AppCompatActivity {
         String gia = edGia.getText().toString();
 
         if (ten.isEmpty()) {
-            Toast.makeText(AddFoodActivity.this, "Tên không đượ trống", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddFoodActivity.this, "Tên không được trống", Toast.LENGTH_SHORT).show();
             return;
         }
         if (gia.isEmpty()) {
@@ -173,7 +189,7 @@ public class AddFoodActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Uri uri) {
                         Food food = new Food(loai,ten,moTa,Integer.parseInt(gia),trangThai,uri.toString());
-                        databaseReference.child("Food").push().setValue(food);
+                        databaseReference.child("Laptop").push().setValue(food);
                         Toast.makeText(getApplicationContext(),"Thêm thành công",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(AddFoodActivity.this,ListFoodActivity.class));
                     }
@@ -183,6 +199,7 @@ public class AddFoodActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(getApplicationContext(),"Thêm thất bại",Toast.LENGTH_SHORT).show();
+
 
             }
         });

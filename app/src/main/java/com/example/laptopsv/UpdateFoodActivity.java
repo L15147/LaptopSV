@@ -203,7 +203,7 @@ public class UpdateFoodActivity extends AppCompatActivity {
                     public void onSuccess(Uri uri) {
                         Food food = new Food(loai,ten,moTa,Integer.parseInt(gia),trangThai,uri.toString());
                         Log.e("ID1", food1.getID());
-                        databaseReference.child("Food").child(food1.getID()).setValue(food);
+                        databaseReference.child("Laptop").child(food1.getID()).setValue(food);
 
                         Toast.makeText(getApplicationContext(),"Cập nhật thành công",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(UpdateFoodActivity.this, com.example.laptopsv.ListFoodActivity.class));
