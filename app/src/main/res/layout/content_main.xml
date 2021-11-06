@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 android:layout_height="150dp"
-                android:src="@drawable/fast_food"
+                android:src="@drawable/dell"
                 android:id="@+id/fastFood"
                 android:layout_margin="10dp"/>
             <ImageView
@@ -49,7 +49,7 @@
                 android:layout_weight="1"
                 android:layout_height="150dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/rice"
+                android:src="@drawable/macbook"
                 android:id="@+id/rice"
                 android:layout_margin="10dp"/>
         </LinearLayout>
@@ -61,12 +61,13 @@
             android:layout_marginRight="20dp"
             android:gravity="center"
             >
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:scaleType="fitXY"
-                android:layout_height="match_parent"
                 android:id="@+id/healthyFood"
-                android:src="@drawable/healthy_food"/>
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/asus" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -80,7 +81,7 @@
                 android:scaleType="fitXY"
                 android:layout_height="wrap_content"
                 android:id="@+id/drink"
-                android:src="@drawable/drink"/>
+                android:src="@drawable/levono_thinkpad"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

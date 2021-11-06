@@ -32,7 +32,7 @@
             android:layout_marginTop="10dp"
             android:layout_weight="4"
             android:gravity="center_horizontal"
-            android:text="Danh sách món ăn"
+            android:text="Danh sách sản phẩm"
             android:textSize="22dp"
             android:textStyle="bold"
             tools:ignore="RtlCompat" />

@@ -83,7 +83,7 @@
                 android:id="@+id/btnAddFood"
                 android:paddingHorizontal="20dp"
                 android:background="@drawable/bg_button"
-                android:text="Thêm món ăn"/>
+                android:text="Thêm"/>
         </LinearLayout>
 
     </LinearLayout>

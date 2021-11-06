@@ -16,7 +16,7 @@
             android:layout_height="130dp"
             android:scaleType="fitXY"
             android:layout_margin="16dp"
-            android:src="@drawable/saladdaudo" />
+            android:src="@drawable/macbook" />
 
         <LinearLayout
             android:layout_width="match_parent"

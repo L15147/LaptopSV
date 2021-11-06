@@ -16,7 +16,7 @@
             android:layout_height="120dp"
             android:layout_margin="16dp"
             android:scaleType="fitXY"
-            android:src="@drawable/saladdaudo" />
+            android:src="@drawable/dell" />
 
         <LinearLayout
             android:layout_width="match_parent"
